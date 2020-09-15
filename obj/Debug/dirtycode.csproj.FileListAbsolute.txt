@@ -1,0 +1,7 @@
+C:\Users\Jorge L\source\repos\dirtycode\dirtycode\bin\Debug\dirtycode.exe.config
+C:\Users\Jorge L\source\repos\dirtycode\dirtycode\bin\Debug\dirtycode.exe
+C:\Users\Jorge L\source\repos\dirtycode\dirtycode\bin\Debug\dirtycode.pdb
+C:\Users\Jorge L\source\repos\dirtycode\dirtycode\obj\Debug\dirtycode.csprojAssemblyReference.cache
+C:\Users\Jorge L\source\repos\dirtycode\dirtycode\obj\Debug\dirtycode.csproj.CoreCompileInputs.cache
+C:\Users\Jorge L\source\repos\dirtycode\dirtycode\obj\Debug\dirtycode.exe
+C:\Users\Jorge L\source\repos\dirtycode\dirtycode\obj\Debug\dirtycode.pdb
