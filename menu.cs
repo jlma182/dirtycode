@@ -130,9 +130,9 @@ namespace dirtycode
                     return item;
                 }
             }
+            Console.WriteLine("registro no exite......");
             return null;
         }
-
 
         public void eliminarRegistro()
         {
@@ -147,43 +147,30 @@ namespace dirtycode
                autos.Remove(autoToDelete);
                Console.WriteLine("Datoss eliminados");
             }
-            else {
-                Console.WriteLine("registro no exite......");
-            }
+       
         }
+
         public void modificarRegistro()
         {
-            Auto ap = new Auto();
-            string buscar;
+            Auto autoToUpdate = new Auto();
+            string copoActualizar;
             Console.Write("ingrese numero de copo:");
-            buscar = Console.ReadLine();
-            foreach (var item in autos)
-            {
-                if (buscar == item.numeroCupo)
-                {
-                    Console.WriteLine("|numer de copo: {0}| marca: {1}| anio de carro: {2}| placa: {3}| impuesto {4}|", item.numeroCupo, item.marca, item.modelo, item.placa, item.impuesto);
-                    Console.Write(">>{0}>>{1}", item.antiguedad(), item.pagar_impuesto());
-
-                    Console.Write("ingrese numero de copo:  ");
-                    ap.numeroCupo = Console.ReadLine();
-                    item.numeroCupo = ap.numeroCupo;
-                    Console.Write("ingrese marca:");
-                    ap.marca = Console.ReadLine();
-                    item.marca = ap.marca;
-                    Console.Write("ingrese anio:");
-                    ap.modelo = int.Parse(Console.ReadLine());
-                    item.modelo = ap.modelo;
-                    Console.Write("ingrese placa:");
-                    ap.placa = Console.ReadLine();
-                    item.placa = ap.placa;
-                    Console.Write("ingrese impuestos:");
-                    ap.impuesto = int.Parse(Console.ReadLine());
-                    item.impuesto = ap.impuesto;
-                    Console.WriteLine("datos modificados...........");
-                }
-
+            copoActualizar = Console.ReadLine();
+            autoToUpdate=buscarAuto(copoActualizar);
+            if (autoToUpdate!=null){
+                verAuto(autoToUpdate);
+                Console.Write("ingrese numero de copo:  ");
+                autoToUpdate.numeroCupo = Console.ReadLine();
+                Console.Write("ingrese marca:");
+                autoToUpdate.marca = Console.ReadLine();
+                Console.Write("ingrese anio:");
+                autoToUpdate.modelo = int.Parse(Console.ReadLine());
+                Console.Write("ingrese placa:");
+                autoToUpdate.placa = Console.ReadLine();
+                Console.Write("ingrese impuestos:");
+                autoToUpdate.impuesto = int.Parse(Console.ReadLine());
+                Console.WriteLine("datos modificados...........");
             }
         }
-
     }
 }
