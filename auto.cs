@@ -8,11 +8,11 @@ namespace dirtycode
 {
     public class auto
     {
-        public string numeroCupo { get; set; }
-        public string marca { get; set; }
-        public int modelo { get; set; }
-        public string placa { get; set; }
-        public int impuesto { get; set; }
+        private string numeroCupo { get; set; }
+        private string marca { get; set; }
+        private int modelo { get; set; }
+        private string placa { get; set; }
+        private int impuesto { get; set; }
 
         public auto()
         { }
