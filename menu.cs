@@ -16,11 +16,11 @@ namespace dirtycode
         {
             do
             {
-                Cabeza();
+                mostrarMenu();
 
             } while (OpcionMenu != "0");
         }
-        private void Cabeza()
+        private void mostrarMenu()
         {
             Console.WriteLine("=====Control impuestos autos de Bolivia=====\n");
             Console.WriteLine("1 Crear registro");
@@ -40,31 +40,31 @@ namespace dirtycode
             {
                 case "1":
                     Console.Clear();
-                    f1();
+                    crearRegistro();
                     RetornarMenu();
                     Console.ReadKey();
                     break;
                 case "2":
                     Console.Clear();
-                    f22();
+                    verLista();
                     RetornarMenu();
                     Console.ReadKey();
                     break;
                 case "3":
                     Console.Clear();
-                    f3();
+                    modificarRegistro();
                     RetornarMenu();
                     Console.ReadKey();
                     break;
                 case "4":
                     Console.Clear();
-                    f4();
+                    eliminarRegistro();
                     RetornarMenu();
                     Console.ReadKey();
                     break;
                 case "r":
                     Console.Clear();
-                    Cabeza();
+                    mostrarMenu();
                     Console.ReadKey();
                     break;
                 case "0":
@@ -79,11 +79,11 @@ namespace dirtycode
         private void RetornarMenu()
         {
             string op;
-            Console.WriteLine("Menu prinumeroCupoipaL -r- ");
+            Console.WriteLine("Retornar al menu");
             op = Console.ReadLine();
             SeleccionMenu(op);
         }
-        public void f1()
+        public void crearRegistro()
         {
             Console.WriteLine("--Crear Automovil");
             Console.Write("ingrese numero de copo:");
@@ -101,19 +101,19 @@ namespace dirtycode
 
             Console.WriteLine("dato guardado.....");
         }
-        public void f22()
+        public void verLista()
         {
 
             Console.WriteLine("total de registros es:" + autos.Count);
             Console.WriteLine("====registros====");
             foreach (Auto item in autos)
             {
-                f2(item);
+                verAuto(item);
             }
 
             Console.WriteLine("\n");
         }
-        private void f2(Auto dato)
+        private void verAuto(Auto dato)
         {
 
             Console.WriteLine("|numer de copo: {0}| marca: {1}| anio de carro: {2}| placaplaca: {3}| impuesto {4}|", dato.numeroCupo, dato.marca, dato.modelo, dato.placa, dato.impuesto);
@@ -121,7 +121,7 @@ namespace dirtycode
             Console.WriteLine("\n");
 
         }
-        public void f4()
+        public void eliminarRegistro()
         {
             string x;
             Console.Write("ingrese numero copo:");
@@ -143,7 +143,7 @@ namespace dirtycode
                 }
             }
         }
-        public void f3()
+        public void modificarRegistro()
         {
             Auto ap = new Auto();
             string buscar;
