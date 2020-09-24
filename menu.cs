@@ -9,7 +9,7 @@ namespace dirtycode
     public class menu
     {
         List<auto> autos = new List<auto>();
-        string nc1, m1, pta1;
+        string numeroCupo1, m1, placa1;
         int a1, i1;
         string OpcionMenu = " ";
         public void iniciar()
@@ -81,7 +81,7 @@ namespace dirtycode
         private void RetornarMenu()
         {
             string op;
-            Console.WriteLine("Menu principaL -r- ");
+            Console.WriteLine("Menu prinumeroCupoipaL -r- ");
             op = Console.ReadLine();
             SeleccionMenu(op);
         }
@@ -89,17 +89,17 @@ namespace dirtycode
         {
             Console.WriteLine("--Crear Automovil");
             Console.Write("ingrese numero de copo:");
-            nc1 = Console.ReadLine();
+            numeroCupo1 = Console.ReadLine();
             Console.Write("ingrese marca:");
             m1 = Console.ReadLine();
-            Console.Write("ingrese plac aPTA:");
-            pta1 = Console.ReadLine();
+            Console.Write("ingrese plac aplaca:");
+            placa1 = Console.ReadLine();
             Console.Write("ingrese el anio:");
             a1 = int.Parse(Console.ReadLine());
             Console.Write("ingrese el impuesto:");
             i1 = int.Parse(Console.ReadLine());
 
-            autos.Add(new auto(nc1, m1, a1, pta1, i1));
+            autos.Add(new auto(numeroCupo1, m1, a1, placa1, i1));
 
             Console.WriteLine("dato guardado.....");
         }
@@ -118,7 +118,7 @@ namespace dirtycode
         private void f2(auto dato)
         {
 
-            Console.WriteLine("|numer de copo: {0}| marca: {1}| anio de carro: {2}| placaPTA: {3}| impuesto {4}|", dato.nc, dato.m, dato.a, dato.pta, dato.i);
+            Console.WriteLine("|numer de copo: {0}| marca: {1}| anio de carro: {2}| placaplaca: {3}| impuesto {4}|", dato.numeroCupo, dato.marca, dato.modelo, dato.placa, dato.impuesto);
             Console.Write(">>{0}>>{1}", dato.antiguedad(), dato.pagar_impuesto());
             Console.WriteLine("\n");
 
@@ -130,9 +130,9 @@ namespace dirtycode
             x = Console.ReadLine();
             foreach (var item in autos)
             {
-                if (x == item.nc)
+                if (x == item.numeroCupo)
                 {
-                    Console.WriteLine("|numer de copo: {0}| marca: {1}| anio de carro: {2}| placaPTA: {3}| impuesto {4}|", item.nc, item.m, item.a, item.pta, item.i);
+                    Console.WriteLine("|numer de copo: {0}| marca: {1}| anio de carro: {2}| placaplaca: {3}| impuesto {4}|", item.numeroCupo, item.marca, item.modelo, item.placa, item.impuesto);
                     Console.WriteLine("\n");
                     autos.Remove(item);
                     Console.WriteLine("DATOs ELIMINADOs");
@@ -153,26 +153,26 @@ namespace dirtycode
             buscar = Console.ReadLine();
             foreach (var item in autos)
             {
-                if (buscar == item.nc)
+                if (buscar == item.numeroCupo)
                 {
-                    Console.WriteLine("|numer de copo: {0}| marca: {1}| anio de carro: {2}| placaPTA: {3}| impuesto {4}|", item.nc, item.m, item.a, item.pta, item.i);
+                    Console.WriteLine("|numer de copo: {0}| marca: {1}| anio de carro: {2}| placa: {3}| impuesto {4}|", item.numeroCupo, item.marca, item.modelo, item.placa, item.impuesto);
                     Console.Write(">>{0}>>{1}", item.antiguedad(), item.pagar_impuesto());
 
                     Console.Write("ingrese numero de copo:  ");
-                    ap.nc = Console.ReadLine();
-                    item.nc = ap.nc;
+                    ap.numeroCupo = Console.ReadLine();
+                    item.numeroCupo = ap.numeroCupo;
                     Console.Write("ingrese marca:");
-                    ap.m = Console.ReadLine();
-                    item.m = ap.m;
+                    ap.marca = Console.ReadLine();
+                    item.marca = ap.marca;
                     Console.Write("ingrese anio:");
-                    ap.a = int.Parse(Console.ReadLine());
-                    item.a = ap.a;
-                    Console.Write("ingrese placaPTA:");
-                    ap.pta = Console.ReadLine();
-                    item.pta = ap.pta;
+                    ap.modelo = int.Parse(Console.ReadLine());
+                    item.modelo = ap.modelo;
+                    Console.Write("ingrese placa:");
+                    ap.placa = Console.ReadLine();
+                    item.placa = ap.placa;
                     Console.Write("ingrese impuestos:");
-                    ap.i = int.Parse(Console.ReadLine());
-                    item.i = ap.i;
+                    ap.impuesto = int.Parse(Console.ReadLine());
+                    item.impuesto = ap.impuesto;
                     Console.WriteLine("datos modificados...........");
                 }
 
