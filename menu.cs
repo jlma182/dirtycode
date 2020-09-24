@@ -121,14 +121,25 @@ namespace dirtycode
             Console.WriteLine("\n");
 
         }
-        public void eliminarRegistro()
-        {
-            string x;
-            Console.Write("ingrese numero copo:");
-            x = Console.ReadLine();
+
+        public bool buscarAuto (string numeroCopo){
             foreach (var item in autos)
             {
-                if (x == item.numeroCupo)
+                if (numeroCopo == item.numeroCupo)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+        public void eliminarRegistro()
+        {
+            string copoEliminado;
+            Console.Write("ingrese numero copo:");
+            copoEliminado = Console.ReadLine();
+            foreach (var item in autos)
+            {
+                if (copoEliminado == item.numeroCupo)
                 {
                     Console.WriteLine("|numer de copo: {0}| marca: {1}| anio de carro: {2}| placaplaca: {3}| impuesto {4}|", item.numeroCupo, item.marca, item.modelo, item.placa, item.impuesto);
                     Console.WriteLine("\n");
