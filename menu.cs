@@ -22,14 +22,12 @@ namespace dirtycode
         }
         private void Cabeza()
         {
-            Console.WriteLine("=====control impuesto autos BOLIVIA=====");
-            Console.WriteLine("\n");
+            Console.WriteLine("=====Control impuestos autos de Bolivia=====\n");
             Console.WriteLine("1 Crear registro");
-            Console.WriteLine("2 Revisar(ver)lista de registros");
+            Console.WriteLine("2 Ver lista de registros");
             Console.WriteLine("3 Modificar registro");
             Console.WriteLine("4 Eliminar registro");
-            Console.WriteLine("0 SALIR");
-            Console.WriteLine("\n");
+            Console.WriteLine("0 SALIR\n");
             Console.Write("Escoja una opcion");
             OpcionMenu = Console.ReadLine();
             SeleccionMenu(OpcionMenu);
