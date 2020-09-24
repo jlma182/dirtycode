@@ -6,18 +6,18 @@ using System.Threading.Tasks;
 
 namespace dirtycode
 {
-    public class auto
+    public class Auto
     {
-        private string numeroCupo { get; set; }
-        private string marca { get; set; }
-        private int modelo { get; set; }
-        private string placa { get; set; }
-        private int impuesto { get; set; }
+        public string numeroCupo { get; set; }
+        public string marca { get; set; }
+        public int modelo { get; set; }
+        public string placa { get; set; }
+        public int impuesto { get; set; }
 
-        public auto()
+        public Auto()
         { }
 
-        public auto(string numeroCupo, string marca, int modelo, string placa, int impuesto)
+        public Auto(string numeroCupo, string marca, int modelo, string placa, int impuesto)
         {
             this.numeroCupo = numeroCupo;
             this.marca = marca;
@@ -29,9 +29,9 @@ namespace dirtycode
         public string antiguedad()
         {
             if (modelo >= 2000)
-                return "auto nuevo";
+                return "Auto nuevo";
             else
-                return "auto viejo";
+                return "Auto viejo";
         }
 
         public string pagar_impuesto()

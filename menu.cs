@@ -8,7 +8,7 @@ namespace dirtycode
 {
     public class menu
     {
-        List<auto> autos = new List<auto>();
+        List<Auto> autos = new List<Auto>();
         string numeroCupo1, m1, placa1;
         int a1, i1;
         string OpcionMenu = " ";
@@ -97,7 +97,7 @@ namespace dirtycode
             Console.Write("ingrese el impuesto:");
             i1 = int.Parse(Console.ReadLine());
 
-            autos.Add(new auto(numeroCupo1, m1, a1, placa1, i1));
+            autos.Add(new Auto(numeroCupo1, m1, a1, placa1, i1));
 
             Console.WriteLine("dato guardado.....");
         }
@@ -106,14 +106,14 @@ namespace dirtycode
 
             Console.WriteLine("total de registros es:" + autos.Count);
             Console.WriteLine("====registros====");
-            foreach (auto item in autos)
+            foreach (Auto item in autos)
             {
                 f2(item);
             }
 
             Console.WriteLine("\n");
         }
-        private void f2(auto dato)
+        private void f2(Auto dato)
         {
 
             Console.WriteLine("|numer de copo: {0}| marca: {1}| anio de carro: {2}| placaplaca: {3}| impuesto {4}|", dato.numeroCupo, dato.marca, dato.modelo, dato.placa, dato.impuesto);
@@ -145,7 +145,7 @@ namespace dirtycode
         }
         public void f3()
         {
-            auto ap = new auto();
+            Auto ap = new Auto();
             string buscar;
             Console.Write("ingrese numero de copo:");
             buscar = Console.ReadLine();
