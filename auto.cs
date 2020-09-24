@@ -8,27 +8,27 @@ namespace dirtycode
 {
     public class auto
     {
-        public string nc { get; set; }
-        public string m { get; set; }
-        public int a { get; set; }
-        public string pta { get; set; }
-        public int i { get; set; }
+        public string numeroCupo { get; set; }
+        public string marca { get; set; }
+        public int modelo { get; set; }
+        public string placa { get; set; }
+        public int impuesto { get; set; }
 
         public auto()
         { }
 
-        public auto(string vnc, string vm, int va, string vpta, int vi)
+        public auto(string numeroCopo, string marca, int modelo, string placa, int impuesto)
         {
-            this.nc = vnc;
-            this.m = vm;
-            this.a = va;
-            this.pta = vpta;
-            this.i = vi;
+            this.numeroCopo = numeroCopo;
+            this.marca = marca;
+            this.modelo = modelo;
+            this.placa = placa;
+            this.impuesto = impuesto;
         }
 
         public string antiguedad()
         {
-            if (a >= 2000)
+            if (modelo >= 2000)
                 return "auto nuevo";
             else
                 return "auto viejo";
@@ -36,7 +36,7 @@ namespace dirtycode
 
         public string pagar_impuesto()
         {
-            if (a >= 2000)
+            if (modelo >= 2000)
                 return "paga impuesto";
             else
                 return "paga impuesto MINIMO";
