@@ -9,8 +9,6 @@ namespace dirtycode
     public class menu
     {
         List<Auto> autos = new List<Auto>();
-        string numeroCupo1, m1, placa1;
-        int a1, i1;
         string OpcionMenu = " ";
         public void iniciar()
         {
@@ -85,19 +83,21 @@ namespace dirtycode
         }
         public void crearRegistro()
         {
+            string numeroCupo, marca, placa;
+            int modelo, impuesto;
             Console.WriteLine("--Crear Automovil");
             Console.Write("ingrese numero de copo:");
-            numeroCupo1 = Console.ReadLine();
+            numeroCupo = Console.ReadLine();
             Console.Write("ingrese marca:");
-            m1 = Console.ReadLine();
+            marca = Console.ReadLine();
             Console.Write("ingrese placa:");
-            placa1 = Console.ReadLine();
+            placa = Console.ReadLine();
             Console.Write("ingrese el anio:");
-            a1 = int.Parse(Console.ReadLine());
+            modelo = int.Parse(Console.ReadLine());
             Console.Write("ingrese el impuesto:");
-            i1 = int.Parse(Console.ReadLine());
+            impuesto = int.Parse(Console.ReadLine());
 
-            autos.Add(new Auto(numeroCupo1, m1, a1, placa1, i1));
+            autos.Add(new Auto(numeroCupo, marca, modelo, placa, impuesto));
 
             Console.WriteLine("dato guardado.....");
         }
