@@ -32,11 +32,11 @@ namespace dirtycode
             OpcionMenu = Console.ReadLine();
             SeleccionMenu(OpcionMenu);
         }
-        private void SeleccionMenu(string op)
+        private void SeleccionMenu(string opcion)
         {
-            if (op == "")
+            if (opcion == "")
                 return;
-            switch (op)
+            switch (opcion)
             {
                 case "1":
                     Console.Clear();
@@ -78,10 +78,10 @@ namespace dirtycode
         }
         private void RetornarMenu()
         {
-            string op;
-            Console.WriteLine("Retornar al menu");
-            op = Console.ReadLine();
-            SeleccionMenu(op);
+            string opcion;
+            Console.WriteLine("Precione cualquier tecla para volver al menu");
+            opcion = Console.ReadLine();
+            SeleccionMenu(opcion);
         }
         public void crearRegistro()
         {
@@ -90,7 +90,7 @@ namespace dirtycode
             numeroCupo1 = Console.ReadLine();
             Console.Write("ingrese marca:");
             m1 = Console.ReadLine();
-            Console.Write("ingrese plac aplaca:");
+            Console.Write("ingrese placa:");
             placa1 = Console.ReadLine();
             Console.Write("ingrese el anio:");
             a1 = int.Parse(Console.ReadLine());
@@ -104,7 +104,7 @@ namespace dirtycode
         public void verLista()
         {
 
-            Console.WriteLine("total de registros es:" + autos.Count);
+            Console.WriteLine("total de registros es:" + autos.Count+"\n");
             Console.WriteLine("====registros====");
             foreach (Auto item in autos)
             {
@@ -116,7 +116,7 @@ namespace dirtycode
         private void verAuto(Auto dato)
         {
 
-            Console.WriteLine("|numer de copo: {0}| marca: {1}| anio de carro: {2}| placaplaca: {3}| impuesto {4}|", dato.numeroCupo, dato.marca, dato.modelo, dato.placa, dato.impuesto);
+            Console.WriteLine("|numero de copo: {0}| marca: {1}| anio de carro: {2}| placa: {3}| impuesto {4}|", dato.numeroCupo, dato.marca, dato.modelo, dato.placa, dato.impuesto);
             Console.Write(">>{0}>>{1}", dato.antiguedad(), dato.pagar_impuesto());
             Console.WriteLine("\n");
 
