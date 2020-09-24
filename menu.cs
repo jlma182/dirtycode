@@ -122,36 +122,33 @@ namespace dirtycode
 
         }
 
-        public bool buscarAuto (string numeroCopo){
+        public Auto buscarAuto (string numeroCopo){
             foreach (var item in autos)
             {
                 if (numeroCopo == item.numeroCupo)
                 {
-                    return true;
+                    return item;
                 }
             }
-            return false;
+            return null;
         }
+
+
         public void eliminarRegistro()
         {
             string copoEliminado;
+            Auto autoToDelete = new Auto();
+
             Console.Write("ingrese numero copo:");
             copoEliminado = Console.ReadLine();
-            foreach (var item in autos)
-            {
-                if (copoEliminado == item.numeroCupo)
-                {
-                    Console.WriteLine("|numer de copo: {0}| marca: {1}| anio de carro: {2}| placaplaca: {3}| impuesto {4}|", item.numeroCupo, item.marca, item.modelo, item.placa, item.impuesto);
-                    Console.WriteLine("\n");
-                    autos.Remove(item);
-                    Console.WriteLine("DATOs ELIMINADOs");
-                    break;
-
-                }
-                else
-                {
-                    Console.WriteLine("registro no exite......");
-                }
+            autoToDelete=buscarAuto(copoEliminado);
+            if (autoToDelete!=null){
+               verAuto(autoToDelete);
+               autos.Remove(autoToDelete);
+               Console.WriteLine("Datoss eliminados");
+            }
+            else {
+                Console.WriteLine("registro no exite......");
             }
         }
         public void modificarRegistro()
