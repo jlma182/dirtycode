@@ -17,9 +17,9 @@ namespace dirtycode
         public auto()
         { }
 
-        public auto(string numeroCopo, string marca, int modelo, string placa, int impuesto)
+        public auto(string numeroCupo, string marca, int modelo, string placa, int impuesto)
         {
-            this.numeroCopo = numeroCopo;
+            this.numeroCupo = numeroCupo;
             this.marca = marca;
             this.modelo = modelo;
             this.placa = placa;
